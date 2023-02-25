@@ -1,0 +1,9 @@
+[submodule "E-Voting-Frontend"]
+	path = E-Voting-Frontend
+	url = https://github.com/IF5200-Class1-Team4/E-Voting-Frontend
+[submodule "E-Voting-Backend"]
+	path = E-Voting-Backend
+	url = https://github.com/IF5200-Class1-Team4/E-Voting-Backend
+[submodule "E-Voting-Blockchain"]
+	path = E-Voting-Blockchain
+	url = https://github.com/IF5200-Class1-Team4/E-Voting-Blockchain
