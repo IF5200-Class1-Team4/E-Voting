@@ -28,7 +28,7 @@ group Voting Mechanism
     system1 -> system2: send user choice
 
     activate system2
-    system2 -> system3: Safe login history
+    system2 -> system3: Safe Voting Data
     system2 -> system1: Notification voting complete
     deactivate system2
     

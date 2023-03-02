@@ -1,0 +1,33 @@
+@startuml use case diagram
+
+left to right direction
+skinparam actor {
+  BackgroundColor White
+  BorderColor Black
+}
+
+actor Voter
+actor Votee
+actor KPU
+
+rectangle "E-Voting Blockchain System"{
+usecase "Register Voter" as UC1
+usecase "Register Votee" as UC2
+usecase "Login" as UC3
+usecase "Vote" as UC4
+usecase "Conduct Voting" as UC5
+usecase "View Voting Progression" as UC6
+}
+
+Voter --> UC1
+UC2 <-- KPU
+Voter --> UC3
+Votee --> UC3
+UC3 <-- KPU
+Voter --> UC4
+UC5 <-- KPU
+Voter --> UC6
+Votee --> UC6
+UC6 <-- KPU
+
+@enduml
