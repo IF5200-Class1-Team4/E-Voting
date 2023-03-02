@@ -1,0 +1,22 @@
+@startuml global sequence diagram
+skinparam maxMessageSize 300
+' actor "Voter" as user1
+actor "Votee" as user2
+actor "KPU" as user3
+participant "Frontend" as system1
+participant "Backend" as system2
+participant "Blockchain" as system3
+
+group Votee Registration alt 2
+    user3 -> system1: Register votee
+    system1 -> system2: Request to backend
+    activate system2
+    system2 -> system2: Waiting Votee confirmation
+    system2 -> user2: send verification email
+    user2 -> system2: Confirm registration
+    system2 -> system3: Safe votee registration
+    deactivate system2
+    
+
+end
+@enduml

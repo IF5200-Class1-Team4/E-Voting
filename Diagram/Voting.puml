@@ -1,0 +1,37 @@
+@startuml global sequence diagram
+skinparam maxMessageSize 300
+actor "Voter" as user1
+' actor "Votee" as user2
+' actor "KPU" as user3
+participant "Frontend" as system1
+participant "Backend" as system2
+participant "Blockchain" as system3
+
+group Voting Mechanism
+    user1 -> system1: Login
+
+    system1 -> system2: send user request
+
+    activate system2
+    system2 -> system2: Authentication
+    system2 -> system3: Safe login history
+    system2 -> system1: Notification login complete
+    deactivate system2
+
+    
+
+    activate system1
+    system1 -> system1: go to voting page
+    deactivate system1
+
+    user1 -> system1: cast vote
+    system1 -> system2: send user choice
+
+    activate system2
+    system2 -> system3: Safe login history
+    system2 -> system1: Notification voting complete
+    deactivate system2
+    
+
+end
+@enduml
