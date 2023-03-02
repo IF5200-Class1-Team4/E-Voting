@@ -1,7 +1,7 @@
 @startuml global sequence diagram
 skinparam maxMessageSize 300
 actor "Voter" as user1
-' actor "Votee" as user2
+' actor "Candidate" as user2
 ' actor "KPU" as user3
 participant "Frontend" as system1
 participant "Backend" as system2

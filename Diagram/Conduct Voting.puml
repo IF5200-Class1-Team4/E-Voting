@@ -3,13 +3,13 @@ skinparam maxMessageSize 300
 
 ' actor "User" as user
 actor "Voter" as user1
-' actor "Votee" as user2
+' actor "Candidate" as user2
 actor "KPU" as user3
 participant "Frontend" as system1
 participant "Backend" as system2
 participant "Blockchain" as system3
 
-group Conduct Voting
+group Aggregate Votes
     user3 -> system1: Conduct Voting
 
     system1 -> system2 ++: send user request
