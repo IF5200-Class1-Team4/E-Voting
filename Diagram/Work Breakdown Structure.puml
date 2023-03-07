@@ -1,0 +1,41 @@
+@startuml WBS
+
+skinparam monochrome true
+
+scale 650 width
+
+title Work Breakdown Structure
+
+rectangle "Project" {
+
+  rectangle "Blockchain" {
+    rectangle "Chaincode" as t31
+    rectangle "Membership Service Provider" as t32
+    rectangle "Channels" as t33
+    rectangle "Consensus" as t34
+  }
+
+  rectangle "Backend" {
+    rectangle "User Authentication" as t21
+    rectangle "Blockchain Connection" as t22
+    rectangle "User Notification" as t23
+  }
+
+  rectangle "Frontend" {
+    rectangle "Login Page" as t11
+    rectangle "Voting Page" as t12
+    rectangle "Admin Page" as t13
+    rectangle "Voting Page" as t14
+  }
+}
+
+t11 --> t12
+t12 --> t13
+t13 --> t14
+t21 --> t22
+t22 --> t23
+t31 --> t32
+t32 --> t33
+t33 --> t34
+
+@enduml

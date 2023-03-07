@@ -7,7 +7,7 @@ participant "Frontend" as system1
 participant "Backend" as system2
 participant "Blockchain" as system3
 
-group Candidate Registration alt 2
+group Candidate Registration
     user3 -> system1: Register candidate
     system1 -> system2: Request to backend
     activate system2

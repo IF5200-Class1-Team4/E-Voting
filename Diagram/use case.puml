@@ -7,7 +7,6 @@ skinparam actor {
 }
 
 actor Voter
-actor Candidate
 actor KPU
 
 rectangle "E-Voting Blockchain System"{
@@ -22,12 +21,10 @@ usecase "View Voting Progression" as UC6
 Voter --> UC1
 UC2 <-- KPU
 Voter --> UC3
-Candidate --> UC3
 UC3 <-- KPU
 Voter --> UC4
 UC5 <-- KPU
 Voter --> UC6
-Candidate --> UC6
 UC6 <-- KPU
 
 @enduml
