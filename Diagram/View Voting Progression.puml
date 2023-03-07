@@ -9,7 +9,7 @@ participant "Frontend" as system1
 participant "Backend" as system2
 participant "Blockchain" as system3
 
-group View Voting
+group View Voting Progression
     user -> system1: View Voting
 
     system1 -> system2 ++: send user request
